@@ -114,7 +114,7 @@ brmap::map_pkt (int pkt_src, unsigned char *packet, int * vid)
       if (bridge.find (dest_mac) != bridge.end ())
 	{
 	  dest_i = bridge[dest_mac].be_src_if;
-	  //bridge[dest_mac].be_last_used = time(0);
+	  bridge[dest_mac].be_last_used = time(0);
 	}
       else
 	{
